@@ -1,0 +1,24 @@
+<html t:type="layout" title="About foosball"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Match page ...</p>
+    <t:grid
+            t:id="matchGrid"
+            source="matches" fwtype="table table-bordered table-striped table-condensed"
+            row="matchGridRow"  add="winner,looser" exclude="id">
+        <p:playedDateCell>
+            ${matchGridRow.playedDate}
+        </p:playedDateCell>
+        <p:winnerCell>
+            ${matchGridRow.winner.name}
+        </p:winnerCell>
+        <p:looserCell>
+            ${matchGridRow.looser.name}
+        </p:looserCell>
+        <p:empty>
+            No matches found, start playing...
+        </p:empty>
+    </t:grid>
+
+</html>

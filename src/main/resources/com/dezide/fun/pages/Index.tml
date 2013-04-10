@@ -1,0 +1,62 @@
+<html t:type="layout" title="foosball Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+        >
+
+<div class="row"><div class="span12">&nbsp;</div> </div>
+
+    <div class="row">
+        <div class="span12 text-centered" style="text-align: center">
+            <h1>Record match outcome</h1>
+        </div>
+    </div>
+<div class="row"><div class="span12">&nbsp;</div> </div>
+
+<t:zone t:id="matchZone">
+            <t:form zone="matchZone">
+            <div class="row">
+            <div class="span4 text-centered">
+                <t:textfield  t:value="winner1" class="player-autocomplete" t:id="winner1" id="winner1" t:mixins="jquery/autocomplete"/>
+            </div>
+            <div class="span4 text-centered"><h3>WINNER(S)</h3></div>
+            <div class="span4 text-centered">
+                <t:textfield  t:value="winner2" class="player-autocomplete" t:id="winner2" id="winner2" t:mixins="jquery/Autocomplete" />
+            </div>
+        </div>
+        <div class="row"><div class="span12">&nbsp;</div> </div>
+        <div class="row">
+            <div class="span12 text-centered">
+                <img src="./images/foosball_table.jpg" style="width:267px;height:200px;"/>
+            </div>
+        </div>
+        <div class="row"><div class="span12">&nbsp;</div> </div>
+        <div class="row">
+            <div class="span4 text-centered">
+                <t:textfield  t:value="looser1" class="player-autocomplete" t:id="looser1" id="looser1" t:mixins="jquery/Autocomplete" />
+            </div>
+            <div class="span4 text-centered"><h3>LOOSER(S)</h3></div>
+            <div class="span4 text-centered">
+                <t:textfield t:value="looser2" class="player-autocomplete" t:id="looser2" id="looser2" t:mixins="jquery/Autocomplete" />
+                <script type="text/javascript">
+                    (function($){
+                        $(".player-autocomplete").bind('autocompletesearch', function(){
+                            var el =
+                            {   "winner1" : $("#winner1").val(),
+                                "winner2" : $("#winner2").val(),
+                                "looser1" : $("#looser1").val(),
+                                "looser2" : $("#looser2").val()
+                            };
+                            $(this).data("extra", el);
+                        });
+                    })(jQuery)
+                </script>
+            </div>
+        </div>
+        <div class="row"><div class="span12">&nbsp;</div> </div>
+        <div class="row">
+            <div class="span12 text-centered">
+                <t:submit t:id="saveMatchResult" value="Save Result"  />
+            </div>
+        </div>
+        </t:form>
+        </t:zone>
+</html>

@@ -1,0 +1,35 @@
+<html t:type="layout" title="Foosball Admin Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter"
+>
+    <h1>People</h1>
+
+    <t:grid source="persons" fwtype="table table-bordered table-striped table-condensed" add="options" row="personGridRow" exclude="id,mean,standardDeviation"  >
+        <p:optionsCell>
+            <t:eventlink t:id="deletePerson" context="personGridRow">Delete</t:eventlink>
+        </p:optionsCell>
+        <p:empty>
+            No persons found, create some...
+        </p:empty>
+    </t:grid>
+    <h1>Teams</h1>
+    <t:grid source="teams" add="options" fwtype="table table-bordered table-striped table-condensed" row="teamGridRow"  >
+        <p:optionsCell>
+            <t:eventlink t:id="deleteTeam" context="teamGridRow">Delete</t:eventlink>
+        </p:optionsCell>
+        <p:empty>
+            No teams found, create some match results...
+        </p:empty>
+    </t:grid>
+    <div>
+        <t:pagelink page="admin/person/create">Add person</t:pagelink>
+    </div>
+    <t:unless test='symbol:tapestry.production-mode' >
+        <div>
+            <t:pagelink page="pagecatalog">Page Catalogue (only available in dev mode)</t:pagelink>
+        </div>
+        <div>
+            <t:pagelink page="servicestatus">Service status (only available in dev mode)</t:pagelink>
+        </div>
+    </t:unless>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="FoosballUnit" transaction-type="RESOURCE_LOCAL">
+        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <class>com.dezide.fun.entities.Match</class>
+        <class>com.dezide.fun.entities.Person</class>
+        <class>com.dezide.fun.entities.Team</class>
+        <properties>
+            <property name="javax.persistence.target-database" value="PostgreSQL" />
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/foosball" />
+            <property name="javax.persistence.jdbc.user" value="foosball" />
+            <property name="javax.persistence.jdbc.password" value="foosball" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <!--<property name="eclipselink.logging.level"  value="fine"/>-->
+        </properties>
+    </persistence-unit>
+
+</persistence>

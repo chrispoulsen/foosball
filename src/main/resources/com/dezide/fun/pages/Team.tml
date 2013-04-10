@@ -1,0 +1,12 @@
+<html t:type="layout" title="About foosball"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Team page ...</p>
+    <t:grid source="teams" fwtype="table table-bordered table-striped table-condensed" row="teamGridRow"  >
+        <p:empty>
+            No teams found, create some match results...
+        </p:empty>
+    </t:grid>
+
+</html>

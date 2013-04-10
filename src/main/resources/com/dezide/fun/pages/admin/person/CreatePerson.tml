@@ -1,0 +1,20 @@
+<html t:type="layout" title="Foosball Admin Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+        >
+    <h1>Here goes  admin create person content...</h1>
+
+    <t:form class="form-horizontal">
+        <t:errors/>
+        <t:beaneditor object="person"  exclude="mean,standardDeviation" fwtype="form-horizontal" />
+        <div class="control-group">
+            <div class="controls">
+                <t:label for="addAnother" class="checkbox">
+                    <t:checkbox value="addAnother" t:id="addAnother" /> Add another
+                </t:label>
+                <input type="submit" class="btn btn-primary" value="Create"/>
+            </div>
+        </div>
+    </t:form>
+   <!--<t:beaneditform object="person" fwtype="form-horizontal" exclude="mean,standardDeviation"  />-->
+
+</html>

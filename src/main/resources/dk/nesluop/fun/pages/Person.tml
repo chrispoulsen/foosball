@@ -1,0 +1,14 @@
+<html t:type="layout" title="Persons"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Person page</p>
+
+    <t:grid source="persons" fwtype="table table-bordered table-striped table-condensed" row="personGridRow"  >
+        <p:empty>
+            No persons found, create some...
+        </p:empty>
+    </t:grid>
+
+
+</html>

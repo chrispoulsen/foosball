@@ -2,9 +2,9 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="FoosballUnit" transaction-type="RESOURCE_LOCAL">
         <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-        <class>com.dezide.fun.entities.Match</class>
-        <class>com.dezide.fun.entities.Person</class>
-        <class>com.dezide.fun.entities.Team</class>
+        <class>dk.nesluop.fun.entities.Match</class>
+        <class>dk.nesluop.fun.entities.Person</class>
+        <class>dk.nesluop.fun.entities.Team</class>
         <properties>
             <property name="javax.persistence.target-database" value="PostgreSQL" />
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

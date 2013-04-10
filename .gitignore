@@ -1,0 +1,6 @@
+.idea/
+foosball.iml
+target/
+*~
+
+src/main/resources/rebel.xml

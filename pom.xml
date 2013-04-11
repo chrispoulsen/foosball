@@ -8,9 +8,6 @@
     <name>foosball Tapestry 5 Application</name>
 
     <dependencies>
-        <!-- Too set up an application with a database, change the artifactId below to
-             tapestry-hibernate, and add a dependency on your JDBC driver. You'll also
-             need to add Hibernate configuration files, such as hibernate.cfg.xml. -->
         <dependency>
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-core</artifactId>
@@ -323,6 +320,8 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <aspectjVersion>1.7.2</aspectjVersion>
     </properties>
     <scm>
-        <developerConnection>scm:git:https://github.com/chrispoulsen/foosball</developerConnection>
+        <url>https://github.com/chrispoulsen/foosball</url>
+        <connection>scm:git:https://github.com/chrispoulsen/foosball.git</connection>
+        <developerConnection>scm:git:https://github.com/chrispoulsen/foosball.git</developerConnection>
     </scm>
 </project>

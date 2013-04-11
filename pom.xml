@@ -321,7 +321,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
     </properties>
     <scm>
         <url>https://github.com/chrispoulsen/foosball</url>
-        <connection>scm:git:https://github.com/chrispoulsen/foosball.git</connection>
-        <developerConnection>scm:git:https://github.com/chrispoulsen/foosball.git</developerConnection>
+        <connection>scm:git:git@github.com:chrispoulsen/foosball.git</connection>
+        <developerConnection>scm:git:git@github.com:chrispoulsen/foosball.git</developerConnection>
     </scm>
 </project>
